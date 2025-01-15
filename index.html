@@ -1,0 +1,155 @@
+<?php
+// $str = $_SERVER['QUERY_STRING'];
+// parse_str($str, $output);
+$domain = $_SERVER['HTTP_HOST'];
+$path_to_wp_load = dirname( __FILE__ ) . '/wp2025/wp-load.php';
+
+// ファイルが存在するかをチェック
+if (file_exists($path_to_wp_load)) {
+    require_once($path_to_wp_load);
+} else {
+    // ファイルが見つからない場合の処理
+	echo "ファイルが見つかりません";
+	echo $path_to_wp_load;
+}
+
+?><!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no,email=no,address=no">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+
+	<meta name="description" content="エコネコル松本支社"/>
+	<meta name="keywords" content="エコネコル 松本"/>
+	
+	<title>エコネコル松本支社 トップページ</title>
+	<!-- include("./parts/ga_code.php"); -->
+	<?php include("./parts/head_link.php"); ?>
+	<link href='css/fullcalendar.css' rel='stylesheet' />
+</head>
+
+<body>
+
+	<div id="wrapper" class="toppage">
+
+		<?php 
+			$page_title = "　";
+			include("./parts/header.php"); 
+		?> <!-- ヘッダー共通部分 -->
+		<article>
+			<section class="topmain">
+				<p class="mainimg"><img src="img/top/mainimg.png" alt=""></p>
+				<div class="mainbox">
+					<div class="mainin">
+						<p class="mainbear"><img src="img/top/bear_main.png" alt=""></p>
+						<div class="maincont">
+							<p class="mainhd">もったいないから、<br>はじまること。</p>
+							<p class="maintxt">よりよい、くらし。<br>よりよい、世界。<br>よりよい、地球。<br>よりよい、未来。</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="contents">
+				<div class="toptime">
+					<h2 class="timetit">営業日のご案内</h2>
+					<div class="timecont">
+						<ul class="timebox">
+							<li>
+								<p class="timedet">松本工場</p>
+								<p class="timetxt">営業時間 8:15〜16:30（日曜休み）</p>
+								<div id="calendar1"></div>
+
+								<!-- <div><img src="<?php echo $calendar_h; ?>" alt=""></div> -->
+							</li>
+							<li>
+								<p class="timedet">あづみ野プラザ</p>
+								<p class="timetxt">営業時間 8:30〜16:30（日曜休み）</p>
+								<div id="calendar2"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="topnews">
+					<div class="inner">
+						<div class="topnewsbox">
+							<h2 class="topnewstit">お知らせ</h2>
+							<ul class="topnewslist">
+								<!-- <li><a href="https://syneco.co.jp/blog/" target="_blank" class="op"><span class="newsdate">2022年4月12日</span><span class="newscont">令和4年 ゴールデンウィーク営業のお知らせ</span></a></li> -->
+								<?php $args = array(
+									'numberposts' => 5, //表示する記事の数
+									'post_type' => 'info' //投稿タイプ名
+									// 条件を追加する場合はここに追記
+									);
+									$customPosts = get_posts($args);
+									if($customPosts) : foreach($customPosts as $post) : setup_postdata( $post );
+								?>
+										<li><a href="<?php the_permalink(); ?>" target="_blank"><span class="newsdate"><?php the_time('Y年m月d日'); ?></span><span class="newscont"><?php the_title(); ?></span></a></li>
+								<?php endforeach; ?>
+								<?php else : //記事が無い場合 ?>
+							</ul>
+							<?php endif;
+									wp_reset_postdata(); //クエリのリセット
+								?>
+							<p class="topnewsbtn"><a href="https://matsumoto.econecol.co.jp/osirase.html" target="_blank" class="op">お知らせ一覧へ</a></p>
+						</div>
+						<div style="margin-top: 40px">
+							<a href="https://twitter.com/synecorecycling?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @synecorecycling</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						</div>
+					</div>
+				</div>
+				<div class="topservice">
+					<div class="inner">
+						<h2 class="sertit">エコネコルのサービス</h2>
+						<ul class="serlist">
+							<li>
+								<a href="omotikomi.html" class="op">
+									<p class="sercap hlg01">不用品の<br>お持ち込み</p>
+									<p class="serimg"><img src="img/top/service_top01.png" alt="不用品の持ち込み"></p>
+								</a>
+							</li>
+							<li>
+								<a href="mbox.html" class="op">
+									<p class="sercap hlg01">もったいない<br>BOX</p>
+									<p class="serimg"><img src="img/top/service_top02.jpg" alt="もったいないBOX"></p>
+								</a>
+							</li>
+							<li>
+								<a href="katazuketai.html" class="op">
+									<p class="sercap hlg01">かたづけ隊</p>
+									<p class="serimg"><img src="img/top/service_top03n.png" alt="かたづけ隊"></p>
+								</a>
+							</li>
+							<li>
+								<a href="kaden.html" class="op">
+									<p class="sercap hlg01">家電4品</p>
+									<p class="serimg"><img src="img/top/service_top04.png" alt="家電4品"></p>
+								</a>
+							</li>
+							
+						</ul>
+						<p class="serbtn"><a href="qa.html" class="op">よくあるご質問</a></p>
+					</div>
+				</div>
+			</section>
+			
+			<?php include("./parts/common_info.php"); ?> <!-- インフォメーション共通部分 -->
+
+		</article>
+
+		<?php include("./parts/footer.php"); ?> <!-- フッター共通部分 -->
+
+	</div>
+	<!-- /#wrapper -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/jquery.matchHeight-min.js"></script>
+	<script src='js/fullcalendar.js'></script>
+    <script src='js/show-calendar.js'></script>
+	
+</body>
+</html>

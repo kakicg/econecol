@@ -1,0 +1,256 @@
+/*
+ Theme Name:   eCONeCol
+ Template:     twentytwentyfive
+ Version:      1.0
+ Description:  2025の子テーマ
+ Author:       kakicg
+*/
+
+/* 必要に応じてカスタマイズ用のCSSを追加 */
+
+@charset "utf-8";
+
+/**
+ * error message
+ */
+.mw_wp_form .error {
+	font-size : 93%;
+	color : #B70000;
+	display : block;
+}
+
+/**
+ * error message of akismet
+ */
+.mw_wp_form .akismet_error {
+	display: block;
+}
+
+/**
+ * vertical style of radio and checkbox
+ */
+.mw_wp_form .vertical-item {
+	display: block;
+}
+.mw_wp_form .vertical-item + .vertical-item {
+	margin-top: 5px;
+}
+
+/**
+ * horizontal style of radio and checkbox
+ */
+.mw_wp_form .horizontal-item + .horizontal-item {
+	margin-left: 10px;
+}
+
+/**
+ * radio and checkbox
+ */
+.mwform-checkbox-field label,
+.mwform-radio-field label {
+	font-weight: normal;
+	margin-bottom: 0;
+}
+.mwform-checkbox-field input,
+.mwform-radio-field input {
+	margin-right: 5px;
+}
+
+/**
+ * datepicker
+ */
+.mw_wp_form .ui-datepicker .ui-datepicker-title select.ui-datepicker-month,
+.mw_wp_form .ui-datepicker .ui-datepicker-title select.ui-datepicker-year {
+	width: 40%;
+	margin: 0 5px;
+}
+
+/**
+ * deprecated message
+ */
+.mw-wp-form-deprecated-message {
+	background: #fdeeee;
+	border: 1px solid #f7bdb8;
+	border-radius: 5px;
+	color: #af4040;
+	font-size: 13px;
+	line-height: 1.6;
+	margin: 0 0 10px;
+	padding: 1em;
+}
+
+/**
+ * file
+ */
+.mw_wp_form input[type="file"] {
+	display: inline-block;
+}
+
+/**
+ * file delete button
+ */
+.mwform-file-delete {
+	cursor: pointer;
+	visibility: hidden;
+}
+
+/**
+ * tel and zip
+ */
+.mwform-tel-field input[type="text"],
+.mwform-zip-field input[type="text"] {
+	display: inline-block;
+	width: auto;
+}
+
+
+.cform {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* テーブル行と列 */
+.cform th {
+	background: #f0f0f0;
+    color: #000;
+    text-align: left;
+    padding: 10px 15px;
+    vertical-align: top;
+    width: 30%;
+}
+
+.cform td {
+    padding: 10px 15px;
+    background: #f8f8f8;
+    width: 70%;
+}
+
+/* 必須マーク */
+.required-srt {
+	background: red;
+    color: white;
+    font-size: 10px;
+    margin-left: 5px;
+	padding: 2px;
+}
+
+/* 入力フィールドのスタイル */
+.cform input,
+.cform textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* フォーカス時のスタイル */
+.cform input:focus,
+.cform textarea:focus {
+    border-color: #0078D7;
+    box-shadow: 0 0 4px rgba(0, 120, 215, 0.5);
+    outline: none;
+}
+
+/* テキストエリア */
+.cform textarea {
+    resize: vertical;
+}
+
+/* Submitボタンのスタイル */
+.text-center input[type="submit"] {
+    background: #0078D7; /* ボタン背景色 */
+    color: #fff; /* 文字色 */
+    border: none; /* 枠線なし */
+    border-radius: 6px; /* 角を少し丸める */
+    padding: 15px 30px; /* 高さと幅の調整 */
+    font-size: 18px; /* フォントサイズを拡大 */
+    font-weight: bold; /* 文字を太くする */
+    cursor: pointer; /* カーソルをポインタに */
+    transition: background-color 0.3s, box-shadow 0.3s; /* ホバー時のアニメーション */
+    display: inline-block; /* サイズ調整のため */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
+}
+
+.text-center input[type="submit"]:hover {
+    background: #005A9E; /* ホバー時の色 */
+    box-shadow: 0 6px 8px rgba(0, 90, 158, 0.3); /* ホバー時の影を強調 */
+}
+.confirm-text {
+	text-align: center;
+	margin-top: 15px;
+	font-size: 14px;
+}
+
+.center input[type="submit"]:hover {
+    background: #005A9E;
+    box-shadow: 0 6px 8px rgba(0, 90, 158, 0.3); /* ホバー時に影を強調 */
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .cform th {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .cform td {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .cform tr {
+        display: block;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .confirmation {
+        font-size: 14px;
+    }
+
+    .center {
+        text-align: left;
+    }
+}
+
+/* 確認メッセージと送信ボタン */
+.confirmation {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.center input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.center input[type="submit"] {
+    background: #0078D7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.center input[type="submit"]:hover {
+    background: #005A9E;
+    box-shadow: 0 4px 6px rgba(0, 90, 158, 0.3);
+}
