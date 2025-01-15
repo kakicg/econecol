@@ -1,0 +1,4 @@
+.htaccess
+wp2025/*
+!wp2025/wp-content/themes/econecol/
+index.php
