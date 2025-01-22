@@ -32,7 +32,7 @@
                 </div>
                 <p class="addrtxt">〒399-8205 長野県安曇野市豊科新田5224-1</p>
                 <p class="addrtel">TEL 0263-87-3912</p>
-                <p class="addrtime">営業時間 8:30〜16:30（月曜休み）</p>
+                <p class="addrtime">営業時間 8:30〜16:30（日曜休み）</p>
             </li>
         </ul>
     </div>
