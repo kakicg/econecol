@@ -138,7 +138,7 @@
         <h2 class="hikihd">もったいないBOXを利用できない廃棄物は<br>こちらをご覧ください。</h2>
         <ul class="nousebtn">
             <li><a href="hikitori.html">不用品の持ち込み</a></li>
-            <li><a href="katazuketai.html">SYNECOかたづけ隊</a></li>
+            <li><a href="katazuketai.html">かたづけ隊</a></li>
         </ul>
     </div>
     <?php include("./parts/contact.php"); ?>
