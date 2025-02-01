@@ -37,9 +37,9 @@
                     <li><a href="omotikomi.html">不用品お持ち込み</a></li>
                     <li class="totab"><a href="omotikomi.html?id=tab01">松本工場</a></li>
                     <li class="totab"><a href="omotikomi.html?id=tab02">あづみ野プラザ</a></li>
-                    <li><a href="toriatukai.html">もったいないBOX</a></li>
-                    <li class="totab"><a href="toriatukai.html?id=tab01">取り扱い品目</a></li>
-                    <li class="totab"><a href="toriatukai.html?id=tab02">設置場所のご案内</a></li>
+                    <li><a href="mbox.html">もったいないBOX</a></li>
+                    <li class="totab"><a href="mbox.html?id=tab01">取り扱い品目</a></li>
+                    <li class="totab"><a href="mbox.html?id=tab02">設置場所のご案内</a></li>
                     <li><a href="katazuketai.html">かたづけ隊</a></li>
 
                 </ul>
