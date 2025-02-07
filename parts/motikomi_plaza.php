@@ -91,10 +91,6 @@
                         <p class="typealltxt">ファンヒーター</p>
                     </li>
                     <li>
-                        <p class="typeallimg hlg01"><img src="img/hikitori/fee_household.png" alt="小型家電類"></p>
-                        <p class="typealltxt">小型家電類</p>
-                    </li>
-                    <li>
                         <p class="othercircle">その他の<br>金属類</p>
                     </li>
                 </ul>
@@ -140,6 +136,10 @@
         <div class="hikitype">
             <div class="typeinner">
                 <ul class="typeall">
+                    <li>
+                        <p class="typeallimg hlg01"><img src="img/hikitori/fee_household.png" alt="小型家電類"></p>
+                        <p class="typealltxt">小型家電類</p>
+                    </li>
                     <li>
                         <p class="typeallimg hlg01"><img src="img/hikitori/fee_futon.png" alt="布団"></p>
                         <p class="typealltxt">布団</p>
