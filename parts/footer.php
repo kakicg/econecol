@@ -13,6 +13,33 @@
         justify-content: flex-start;
         padding: 30px 5% 160px;
     }
+    @media (max-width: 767px) {
+        #footer .footernavi {
+            justify-content: center;
+        }
+        #footer .footer_left {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            background: #D8E2F3;
+            padding: 30px 15%;
+        }
+        #footer .footer_right {
+            width: 100%;
+            display: flex;
+            background: #FBF6DC;
+            align-items: center;
+            padding: 30px 5% 160px;
+        }
+        #footer .footernavi .navibox li a,
+        #footer .footernavi .navibox li.totab a {
+            font-size: 120%;
+        }
+        #footer .footerinner {
+            margin: 0 auto;
+        }
+    }
+
 </style>
 <footer id="footer">
     <div class="footer_left">
